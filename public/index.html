@@ -1,0 +1,41 @@
+<html>
+
+<head>
+  <title>Express</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="angular.js"></script>
+</head>
+
+<body>
+  <h1>Express</h1>
+  <p>Welcome to Express</p>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+      $(document).ready(function(){
+          $("button").click(function(){
+              $.post("demo_test_post.asp",
+                  {
+                      name: "Donald Duck",
+                      city: "Duckburg"
+                  },
+                  function(data,status){
+                      alert("Data: " + data + "\nStatus: " + status);
+                  });
+          });
+      });
+  </script>
+</head>
+<body>
+
+<button>Send an HTTP POST request to a page and get the result back</button>
+
+</body>
+</html>
