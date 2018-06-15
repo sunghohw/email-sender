@@ -17,6 +17,7 @@ module.exports = {
             to: 'danny9512@gmail.com',
             subject: 'Sending Email using Node.js',
             text: 'That was easy!'
+
         };
 
         transporter.sendMail(mailOptions, function (error, info) {

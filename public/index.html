@@ -11,30 +11,30 @@
 <p>Welcome to Express</p>
 
 <div id="form-messages"></div>
-<form id="ajax-contact" method="post" action="/users">
+<form id="ajax-contact" action="/users" target="_blank">
     <div class="field">
         <label for="from">From:</label>
-        <input type="email" id="from" name="from" required>
+        <input type="email" id="from" name="from" value="a@a" required>
     </div>
 
     <div class="field">
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="password" value="b" required>
     </div>
 
     <div class="field">
         <label for="to">To:</label>
-        <input type="email" id="to" name="to" required>
+        <input type="email" id="to" name="to" value="c@c" required>
     </div>
 
     <div class="field">
         <label for="cc">cc:</label>
-        <input type="email" id="cc" name="cc" >
+        <input type="email" id="cc" value="d@d" name="cc" >
     </div>
 
     <div class="field">
         <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
+        <textarea id="message" name="message"></textarea>
     </div>
 
     <div class="field">
@@ -53,7 +53,7 @@
     $(form).submit(function (event) {
         // Stop the browser from submitting the form.
         event.preventDefault();
-// Serialize the form data.
+        // Serialize the form data.
         var formData = $(form).serialize();
         $.ajax({
             type: 'POST',
